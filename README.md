@@ -15,7 +15,7 @@ User:
      2. Staff
      3. Manager
 
-Here, Admin can create account for other users, do CRUD operations for food items. Staff can take orders from customers and generate their bills. And Manager can see the user's info and see the sales report of the restaurant.
+Here, Admin can create account for other users, do CRUD operations for food items and update user's info. Staff can take orders from customers and generate their bills. And Manager can see the user's info and see the sales report of the restaurant.
 
 
 ## Splash Screen
