@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{038AD91E-C422-4648-A522-BCE17E5686F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RestaurantManagement</RootNamespace>
+    <AssemblyName>RestaurantManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\AIUB\CODING\C Sharp\FINAL PROJECT\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4F5970466421E55D876BAD123F6A054AA1BEC288</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RestaurantManagement_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="frmAdminLoginForSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminLoginForSignUp.Designer.cs">
+      <DependentUpon>frmAdminLoginForSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManagerDashboard.Designer.cs">
+      <DependentUpon>frmManagerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcAdd.Designer.cs">
+      <DependentUpon>frmUcAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminDashboard.Designer.cs">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStaffDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStaffDashboard.Designer.cs">
+      <DependentUpon>frmStaffDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPasswordSetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPasswordSetPassword.Designer.cs">
+      <DependentUpon>frmForgotPasswordSetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForgotPasswordVarify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPasswordVarify.Designer.cs">
+      <DependentUpon>frmForgotPasswordVarify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSignUp.Designer.cs">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcDelete.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcDelete.Designer.cs">
+      <DependentUpon>frmUcDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcHomeAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcHomeAdmin.Designer.cs">
+      <DependentUpon>frmUcHomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcManagerHomecs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcManagerHomecs.Designer.cs">
+      <DependentUpon>frmUcManagerHomecs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcPlaceOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcPlaceOrder.Designer.cs">
+      <DependentUpon>frmUcPlaceOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcSalesReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcSalesReport.Designer.cs">
+      <DependentUpon>frmUcSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcStaffHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcStaffHome.Designer.cs">
+      <DependentUpon>frmUcStaffHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcUpdate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcUpdate.Designer.cs">
+      <DependentUpon>frmUcUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUcUpdateUsers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUcUpdateUsers.Designer.cs">
+      <DependentUpon>frmUcUpdateUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsersInfoManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmUsersInfoManager.Designer.cs">
+      <DependentUpon>frmUsersInfoManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAdminLoginForSignUp.resx">
+      <DependentUpon>frmAdminLoginForSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagerDashboard.resx">
+      <DependentUpon>frmManagerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStaffDashboard.resx">
+      <DependentUpon>frmStaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcAdd.resx">
+      <DependentUpon>frmUcAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPasswordSetPassword.resx">
+      <DependentUpon>frmForgotPasswordSetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPasswordVarify.resx">
+      <DependentUpon>frmForgotPasswordVarify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSignUp.resx">
+      <DependentUpon>frmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcDelete.resx">
+      <DependentUpon>frmUcDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcHomeAdmin.resx">
+      <DependentUpon>frmUcHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcManagerHomecs.resx">
+      <DependentUpon>frmUcManagerHomecs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcPlaceOrder.resx">
+      <DependentUpon>frmUcPlaceOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcSalesReport.resx">
+      <DependentUpon>frmUcSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcStaffHome.resx">
+      <DependentUpon>frmUcStaffHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcUpdate.resx">
+      <DependentUpon>frmUcUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUcUpdateUsers.resx">
+      <DependentUpon>frmUcUpdateUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUsersInfoManager.resx">
+      <DependentUpon>frmUsersInfoManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="RestaurantManagement_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fastfood_dribbble_video.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fastfood_dribbble_video1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
